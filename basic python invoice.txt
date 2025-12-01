@@ -1,0 +1,54 @@
+# ==============================
+#   ADVANCED BASIC INVOICE
+#   12 ITEMS + ₹ CURRENCY
+#   Customer: Rohit Singh
+# ==============================
+
+# Order Info
+order_no = "#INV5623"
+order_date = "01-Dec-2025"
+
+# Customer Info
+customer_name = "Rohit Singh"
+customer_address = "Sector 12, Dwarka, New Delhi, India"
+
+# ------------------------------
+# 12 Order Items
+# ------------------------------
+items = [
+    ("Bluetooth Speaker", "Electronics", 1399),
+    ("Travel Backpack", "Accessories", 1999),
+    ("Digital Watch", "Wearable", 2499),
+    ("Wireless Keyboard", "Computer Accessory", 1199),
+    ("Sports Shoes", "Footwear", 2999),
+    ("Smart LED Bulb", "Electronics", 599),
+    ("Phone Stand", "Mobile Accessory", 199),
+    ("Gaming Mouse", "Computer Accessory", 799),
+    ("USB Type-C Cable", "Mobile Accessory", 299),
+    ("TWS Earbuds", "Electronics", 1599),
+    ("Fitness Band", "Wearable", 1899),
+    ("Laptop Cooling Pad", "Computer Accessory", 999)
+]
+
+# Calculate Total
+total_price = sum(price for _, _, price in items)
+
+# ------------------------------
+# Print Invoice
+# ------------------------------
+print("======== INVOICE ========")
+print(f"Order No: {order_no}")
+print(f"Order Date: {order_date}")
+print("--------------------------")
+print("Customer Details")
+print(f"Name: {customer_name}")
+print(f"Address: {customer_address}")
+print("--------------------------")
+print("Order Items:")
+
+for i, (name, type_, price) in enumerate(items, start=1):
+    print(f"{i}. {name} - {type_} - ₹{price}")
+
+print("--------------------------")
+print(f"Total Amount: ₹{total_price}")
+print("==========================")
