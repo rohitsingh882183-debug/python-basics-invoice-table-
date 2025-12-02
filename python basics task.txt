@@ -1,0 +1,237 @@
+1. Area of Rectangle:-
+
+
+l = float(input("Enter length: "))
+b = float(input("Enter breadth: "))
+print("Area =", l * b)
+
+
+2. Area of Square
+
+
+l = float(input("Enter side: "))
+print("Area =", l * l)
+
+
+3. Area of Circle
+
+r = float(input("Enter radius: "))
+area = 3.14 * r * r
+print("Area =", area)
+
+
+4. Average of 5 Numbers
+
+nums = [float(input("Enter number: ")) for _ in range(5)]
+print("Average =", sum(nums) / 5)
+
+
+5. Simple Interest
+
+p = float(input("Enter principal: "))
+r = float(input("Enter rate: "))
+t = float(input("Enter time: "))
+print("Simple Interest =", (p * r * t) / 100)
+
+
+6. Square & Cube of 3 numbers
+
+for i in range(3):
+    n = int(input("Num: "))
+    print("Square:", n*n, "Cube:", n*n*n)
+
+
+7. Fahrenheit → Celsius
+
+f = float(input("F: "))
+print("C =", (f-32)*5/9)
+
+
+8. Even or Odd
+
+n = int(input("Num: "))
+print("Even" if n%2==0 else "Odd")
+
+
+9. Leap Year
+
+y = int(input("Year: "))
+print("Leap Year" if (y%4==0 and y%100!=0) or y%400==0 else "Not Leap")
+
+
+10. Smallest of 2 (Conditional Operator)
+
+a = int(input("A: "))
+b = int(input("B: "))
+print("Smallest =", a if a<b else b)
+
+
+11. Zero / Positive / Negative
+
+n = int(input("Num: "))
+if n==0: print("Zero")
+elif n>0: print("Positive")
+else: print("Negative")
+
+
+12. Greatest of 2
+
+a = int(input("A: "))
+b = int(input("B: "))
+print("Greatest =", a if a>=b else b)
+
+
+13. Voting Eligibility
+
+age = int(input("Age: "))
+print("Not Eligible" if age<18 else "Eligible")
+
+
+14. Blood Donor Eligibility
+
+age = int(input("Age: "))
+if 18 < age <= 55:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+
+15. Smallest of 2
+
+a = int(input("A: "))
+b = int(input("B: "))
+print("Smallest =", a if a<b else b)
+
+
+16. Maximum of 3 (No Nested IF / No Logical OR)
+
+a,b,c = map(int,input("Enter 3 nums: ").split())
+maxi = a
+if b > maxi: maxi = b
+if c > maxi: maxi = c
+print("Max =", maxi)
+
+
+17. <100 AND Odd/Even
+
+n = int(input("Num: "))
+if n < 100:
+    print("Even" if n%2==0 else "Odd")
+else:
+    print("Not < 100")
+
+
+18. Square if < 10
+
+n = int(input("Num: "))
+if n < 10:
+    print("Square =", n*n)
+
+19. Nested IF Zero/Positive/Negative
+
+n = int(input("Num: "))
+if n >= 0:
+    if n == 0: print("Zero")
+    else: print("Positive")
+else:
+    print("Negative")
+
+
+20. Greatest of 3 (Nested IF)
+
+a,b,c = map(int,input("Enter 3 numbers: ").split())
+if a>b:
+    if a>c: print("Greatest =",a)
+    else: print("Greatest =",c)
+else:
+    if b>c: print("Greatest =",b)
+    else: print("Greatest =",c)
+
+21. Smallest of 3 (Logical Operator)
+
+a,b,c = map(int,input().split())
+if a<b and a<c: print("Smallest =",a)
+elif b<c: print("Smallest =",b)
+else: print("Smallest =",c)
+
+
+22. Factorial
+
+n = int(input("Num: "))
+f = 1
+for i in range(1,n+1):
+    f *= i
+print("Factorial =", f)
+
+
+23. Swap 2 numbers (third variable)
+
+a = int(input("A: "))
+b = int(input("B: "))
+temp = a
+a = b
+b = temp
+print(a, b)
+
+
+24. Multiplication Table
+
+n = int(input("Num: "))
+for i in range(1,11):
+    print(n, "x", i, "=", n*i)
+
+25. Sum of Natural Numbers
+
+n = int(input("Num: "))
+print("Sum =", n*(n+1)//2)
+
+
+26. Number → Day Name
+
+n = int(input("1-7: "))
+days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+print(days[n-1])
+
+
+27. Month Name (Switch Case)
+
+n = int(input("1-12: "))
+months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+print(months[n-1])
+
+
+28. Car Insurance Premium
+
+cat = input("A/B/C: ").upper()
+val = float(input("Car value: "))
+if cat=="A": print("Premium =", 0.02 * val)
+elif cat=="B": print("Premium =", 0.03 * val)
+elif cat=="C": print("Premium =", 0.05 * val)
+
+
+29. Calculator (Switch Case)
+
+print("1.Add 2.Sub 3.Mul 4.Div")
+ch = int(input("Choice: "))
+a = float(input("A: "))
+b = float(input("B: "))
+
+if ch==1: print(a+b)
+elif ch==2: print(a-b)
+elif ch==3: print(a*b)
+elif ch==4: print(a/b)
+
+
+30. Average & Grade
+
+marks = [float(input("Mark: ")) for _ in range(5)]
+avg = sum(marks)/5
+
+if avg < 50: grade="F"
+elif avg < 60: grade="D"
+elif avg < 70: grade="C"
+elif avg < 80: grade="B"
+elif avg < 90: grade="A"
+else: grade="A+"
+
+print("Average:", avg, "Grade:", grade)
